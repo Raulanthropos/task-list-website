@@ -112,24 +112,22 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                 Create a function "removeLast" which removes the last item from the task list
             */
 
-      //   const removeLastButton = document.querySelector(".button-remove-last");
-      //   const listItems = document.querySelectorAll("li");
-      //   const removeLastTask = function() {
-      //     removeLastButton.addEventListener('click', function(event) {
-      //       const ulTag = document.getElementById("myTaskList");
-      //       const lastItem = ulTag.getElementsByTagName("li")[???];
-      //       console.log(ulTag, typeof ulTag, lastItem);
-      //     })
-      //   }
-
-      // removeLastTask();
+        const removeLastButton = document.querySelector(".button-remove-last");
+        const listItems = document.querySelectorAll("li");
+        const removeLastTask = function() {
+          for (let i = 0; i < listItems.length; i++) {
+            if (listItems[i] === listItems[length-1]) {
+              listItems[i].remove();
+            }
+          }
+          }
+          removeLastButton.addEventListener('click', removeLastTask);
 
       /* EXERCISE 7:
                 Create a function "removeFirst" which removes the first item from the task list
             */
 
       const removeFirstButton = document.querySelector(".button-remove-first");
-      const listItems = document.querySelectorAll("li");
       const removeFirstTask = function () {
         removeFirstButton.addEventListener("click", function (event) {
           const ulTag = document.getElementById("myTaskList");
